@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Darkenstone</name>
+    </assembly>
+    <members>
+        <member name="M:Darkenstone.Abilities.Ability.Use(Darkenstone.Common.IDamageable)">
+            <summary>
+            Causes ability to take effect.
+            </summary>
+            <param name="damageable">In case the ability is targeted, it may
+            require target object.</param>
+        </member>
+        <member name="F:Darkenstone.AbilityCard.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.AbilityCard.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Darkenstone.AbilityCard.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Darkenstone.AbilityContainer.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.AbilityContainer.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Darkenstone.AbilityContainer.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Darkenstone.AddCharacterForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.AddCharacterForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Darkenstone.AddCharacterForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.Buffs.Buff.StartTick">
+            <summary>
+            Executes the part of the buff that takes place before abilities are used.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.Buffs.Buff.EndTick">
+            <summary>
+            Executed the part of the buff that takes place after abilities are used.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.Buffs.IBuffManager.StartTick">
+            <summary>
+            Calls startTick() method on all active buffs.
+            </summary>
+            <seealso cref="M:Darkenstone.Buffs.Buff.StartTick"/>
+        </member>
+        <member name="M:Darkenstone.Buffs.IBuffManager.EndTick">
+            <summary>
+            Calls endTick() method on all active buffs.
+            </summary>
+            <seealso cref="M:Darkenstone.Buffs.Buff.EndTick"/>
+        </member>
+        <member name="M:Darkenstone.Buffs.IBuffManager.FinishRound">
+            <summary>
+            Reduces duration and delay on all active buffs and removes those with
+            no remaining duration.
+            </summary>
+        </member>
+        <member name="F:Darkenstone.CharacterIcon.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.CharacterIcon.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Darkenstone.CharacterIcon.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.Common.Damaging.DoDamage(Darkenstone.Common.IDamageable,System.Int32)">
+            <summary>
+            Does damage to damageable. In case damage done exceeds current health,
+            the health is set to 0.
+            </summary>
+            <param name="damageable">Damaged object.</param>
+            <param name="baseDamage">Amount of base damage done, decreased by
+            defense coefficient.</param>
+            <exception cref="T:System.ArgumentNullException">In case damaged object is null.
+            </exception>
+        </member>
+        <member name="M:Darkenstone.Common.Damaging.DoHealing(Darkenstone.Common.IDamageable,System.Int32)">
+            <summary>
+            Heals damageable by healing. Maximum health of healed object is never
+            exceeded.
+            </summary>
+            <param name="damageable">Healed object.</param>
+            <param name="healing">Amount of healing done.</param>
+            <exception cref="T:System.ArgumentNullException">In case no healed object is null.
+            </exception>
+            <exception cref="T:Darkenstone.DeadException">In case targeted object is dead.
+            </exception>
+        </member>
+        <member name="F:Darkenstone.GamePlayControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.GamePlayControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Darkenstone.GamePlayControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.Game.IGameManager.FinishRound">
+            <summary>
+            Finishes the round and causes the game to end in case of proper 
+            conditions.
+            </summary>
+            <returns>Ability chosen by monster. If no ability was chosen or it was player's round,
+            returns null.</returns>
+        </member>
+        <member name="P:Darkenstone.Game.IRoundManager.Current">
+            <summary>
+            Returns the character, whose turn it is to play.
+            </summary>
+        </member>
+        <member name="P:Darkenstone.Game.IRoundManager.Next">
+            <summary>
+            Returns the character, whose turn it will be after current character 
+            finishes his round.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.Game.IRoundManager.FinishRound">
+            <summary>
+            Ensures all abilities and buffs of current character playing are 
+            correctly used and changes current character.
+            </summary>
+            <returns>Ability chosen by monster. If it was player's round, returns null.</returns>
+        </member>
+        <member name="F:Darkenstone.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Darkenstone.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.RegistryUtilities.RenameSubKey(Microsoft.Win32.RegistryKey,System.String,System.String)">
+            <summary>
+            Renames a subkey of the passed in registry key since 
+            the Framework totally forgot to include such a handy feature.
+            </summary>
+            <param name="parentKey">The RegistryKey that contains the subkey 
+            you want to rename (must be writeable)</param>
+            <param name="subKeyName">The name of the subkey that you want to rename
+            </param>
+            <param name="newSubKeyName">The new name of the RegistryKey</param>
+            <returns>True if succeeds</returns>
+        </member>
+        <member name="M:Darkenstone.RegistryUtilities.CopyKey(Microsoft.Win32.RegistryKey,System.String,System.String)">
+            <summary>
+            Copy a registry key.  The parentKey must be writeable.
+            </summary>
+            <param name="parentKey"></param>
+            <param name="keyNameToCopy"></param>
+            <param name="newKeyName"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Darkenstone.MainMenu.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.MainMenu.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Darkenstone.MainMenu.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Darkenstone.MessageWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.MessageWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Darkenstone.MessageWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Darkenstone.OpponentChoiceMenu.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.OpponentChoiceMenu.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Darkenstone.OpponentChoiceMenu.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:Darkenstone.RewardMenu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Darkenstone.RewardMenu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Darkenstone.RewardMenu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Darkenstone.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Darkenstone.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Darkenstone.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Darkenstone.Properties.Resources.amethystFinal">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="F:SmoothProgressBar.SmoothProgressBar.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SmoothProgressBar.SmoothProgressBar.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SmoothProgressBar.SmoothProgressBar.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
