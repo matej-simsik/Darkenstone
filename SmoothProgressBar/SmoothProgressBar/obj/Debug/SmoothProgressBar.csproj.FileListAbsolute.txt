@@ -1,5 +1,0 @@
-C:\Users\Matej\Desktop\skola\C#\Darkenstone\Darkenstone\SmoothProgressBar\SmoothProgressBar\bin\Debug\SmoothProgressBar.dll
-C:\Users\Matej\Desktop\skola\C#\Darkenstone\Darkenstone\SmoothProgressBar\SmoothProgressBar\bin\Debug\SmoothProgressBar.pdb
-C:\Users\Matej\Desktop\skola\C#\Darkenstone\Darkenstone\SmoothProgressBar\SmoothProgressBar\obj\Debug\SmoothProgressBar.csprojResolveAssemblyReference.cache
-C:\Users\Matej\Desktop\skola\C#\Darkenstone\Darkenstone\SmoothProgressBar\SmoothProgressBar\obj\Debug\SmoothProgressBar.dll
-C:\Users\Matej\Desktop\skola\C#\Darkenstone\Darkenstone\SmoothProgressBar\SmoothProgressBar\obj\Debug\SmoothProgressBar.pdb
