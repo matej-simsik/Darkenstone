@@ -1,0 +1,13 @@
+0. Start the game
+1. New game
+2. Add a new character with your name and color
+3. Select your character (white border changed to purple)
+4. Select opponent (these get unlocked when you progress)
+5. Start game!
+6. Drag & drop selected abilities (you can select the same one multiple times unless it has cooldown)
+7. Finish round
+8. Some abilites are cast after a round or so, these cost less mana
+9. Watch your mana, health (top right) and opponent's abilities (in top window)
+10. Have fun!
+11. Once you win some games, you earn experience, money and stats. Check these by hovering above these in main menu
+12. You may spend your money in main menu in Rewards to boost your character even more
